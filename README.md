@@ -1,43 +1,92 @@
-WORDPRESS FOUNDATION
-===================
+# Foundation, for WordPress
 
-UPDATED TO VERSION 3.0
+Foundation, for WordPress, is a blank starter theme with the exceptional capabilities of [ZURB's Foundation Framework](http://foundation.zurb.com/) and [HTML5 Boilerplate](http://html5boilerplate.com/).
 
-Zurb's Foundation (http://foundation.zurb.com) in WordPress theme form. Using Eddie Machado's Bones for a starting point (https://github.com/eddiemachado/bones). 
+As a neat-freak designer, it's sometimes intimidating and frustrating looking at a WordPress theme framework that's jam-packed with unnecessary extras and bloated code. That's why I created Foundation, for WordPress, which offers only the necessary essentials to get your site running, with all the jazz of responsive web-design.
 
-FEATURES
-________
+"The ability to simplify means to eliminate the unnecessary so that the necessary may speak." ~ Hans Hofmann, Introduction to the Bootstrap, 1993
 
-We’ve built the WordPress Foundation theme so that it could be used as-is or as a starting point for theme developers. It’s built on top of the Bones theme framework by Eddie Machado and based on v3.0 of Zurb's Foundation.
+## Demonstration
 
-Here’s what we’ve got so far. Watch this project on Github to keep up with some enhancements we’re developing.
+You can view Foundation, for WordPress (FWP) online at this address: [http://fwp.drewsymo.com](http://fwp.drewsymo.com)
+## Features
 
-Responsive
-__________
+Foundation, for WordPress, features everything ZURB's Foundation Framework and HTML5 Boilerplate have to offer, however, some changes have been made to tailer it to WordPress, these include:
 
-Foundation is responsive by nature.  This will look good on everything from mobile to desktop.
+* All your common WordPress template files
+* Orbit for WordPress, ZURB's image and content slider tailored for WordPress, with the ability to manage your slider through WordPress
+* A ySlow score of 99 (in regards to 'Small Site or Blog')
+* Clean, validated code
+* Two sidebars (one on the right & one on the footer)
+* A little snippet that 'hides' the address bar on the iPhone
+* An extremely awesome pagination script by @ericmartin, using Foundations pagination CSS
+* An improved viewport snippet, allowing the same scale over horizontal and portrait orientations
 
-Page Templates
-______________
+## Download
 
-We’ve packaged four different page templates into this theme.
+Clone the git repo - `git clone git://github.com/drewsymo/Foundation.git` - or, [download the archive](https://github.com/drewsymo/Foundation/zipball/master). 
 
-    - Homepage template (seen on the homepage of this site)
-    - Standard page with right sidebar (this page)
-    - Page with left sidebar
-    - Full width page
+## Snippets
 
-Theme Options Panel
-___________________
+### Orbit, for WordPress
 
-Want to change some colors? Do it all in our options panel.
+Demonstration: [http://fwp.drewsymo.com/orbit](http://fwp.drewsymo.com/orbit)
 
-Shortcodes
-__________
+Orbit, for WordPress, is Foundation's awesome slider built to work in WordPress. It allows you to manage your slider images and content through the backend. Neat, right? 
 
-We’ve built in some shortcodes so you can easily add UI elements found in Foundation.
+Just head into your admin panel, and:
 
-Sidebars
-________
+* Click the link named 'Orbit' in the left hand side navigation
+* Create a new post within that category
+* Click 'Featured Image' on the right hand side
+* Upload your image and click 'Set as featured image'
+* Hit publish, and you're done!
 
-We’ve built in two different sidebars. One for the homepage and one for the other pages. Add widgets to your heart’s content.
+```HTML
+<h3>Orbit, for WordPress</h3>
+	<div class="row">
+		<div class="twelve columns">
+			<div id="featured"> 
+				<?php SliderContent(); ?>
+			</div>
+		</div>
+	</div>
+```
+
+When using Orbit, it's best to upload an image to it as the height is inherited - that, or - change the min-height of Orbit within app.css (if your only using text), like so:
+
+``` 
+.orbit-wrapper {
+	min-height:400px;
+}
+```
+
+You can manage Orbit's options through app.js (don't worry, theres an options page coming shortly)
+
+## Authors
+
+**ZURB**
+
++ Foundation was made by ZURB, an interaction design and design strategy firm in Campbell, CA.
++ Follow [ZURB on Twitter](http://twitter.com/#!/foundationzurb)
+
+**Drew Morris**
+
++ Drew Morris is a freelance Website Designer currently living in Sydney, Australia.
++ Follow [Drew on Twitter](http://www.twitter.com/drewsymo)
++ Follow [Drew on Google +](https://plus.google.com/114153589610660530694?rel=author)
++ View [Drew's Website](http://www.drewsymo.com)
+
+## License
+
+### Foundation, for WordPress
+
+Foundation, for WordPress, is listed under Public Domain.
+
+### Major Components
+
+For more information about the licensing involved with Foundation, for WordPress' major components, please see:
+
+* [ZURB's Foundation Framework](http://foundation.zurb.com/) (MIT Open License)
+* [HTML5 Boilerplate](http://html5boilerplate.com/) (Public Domain)
+

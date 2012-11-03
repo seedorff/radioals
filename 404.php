@@ -1,31 +1,15 @@
 <?php get_header(); ?>
-			
-			<div id="content" class="clearfix">
-			
-				<div id="main" class="twelve columns clearfix" role="main">
+	
+	<div class="twelve columns centered">
+	<div class="alert-box error">404!</div>
+	<h1>!@!#@$@@!!</h1>  
+	<p>404's are such a lovely thing. But you know, I'm not going to leave you stranded.</p>
+	<p>Why don't you try a search?</p>
+	
+	<?php get_search_form(); ?>
+	
+	<a href="<?php echo home_url( '/' ); ?>">&larr; Go Home?</a>
 
-					<article id="post-not-found" class="clearfix">
-						
-						<header>
-							
-							<h1>Epic 404 - Article Not Found</h1>
-						
-						</header> <!-- end article header -->
-					
-						<section class="post_content">
-							
-							<p>The article you were looking for was not found, but maybe try looking again!</p>
-					
-						</section> <!-- end article section -->
-						
-						<footer>
-							
-						</footer> <!-- end article footer -->
-					
-					</article> <!-- end article -->
-			
-				</div> <!-- end #main -->
-    
-			</div> <!-- end #content -->
-
+<?php get_sidebar(); ?>
+		
 <?php get_footer(); ?>

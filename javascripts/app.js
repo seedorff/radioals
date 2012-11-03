@@ -1,125 +1,93 @@
-jQuery(document).ready(function ($) {
+/* Foundation v2.1.3 http://foundation.zurb.com */
+$(document).ready(function () {
 
-  /* Use this js doc for all application specific JS */
+	/* Use this js doc for all application specific JS */
+    
+    /* ORBIT */
+     $(window).load(function() {
+         $('#featured').orbit();
+     });
+    
+    /* HIDE ADDRESS BAR ON IPHONE */
+    
+    window.scrollTo(0,1);
+	
+	/* WORDPRESS NAV-BAR SUPPORT ------------- */
+	/* Adds support for the nav-bar with flyouts in WordPress */
+	
+	$('.nav-bar li').has('ul').addClass("has-flyout");
+	$('.nav-bar li ul').addClass("flyout");	
 
-  /* TABS --------------------------------- */
-  /* Remove if you don't need :) */
+	/* TABS --------------------------------- */
+	/* Remove if you don't need :) */
 
-  function activateTab($tab) {
-    var $activeTab = $tab.closest('dl').find('dd.active'),
-        contentLocation = $tab.children('a').attr("href") + 'Tab';
+	function activateTab($tab) {
+	  var $activeTab = $tab.closest('dl').find('a.active'),
+	      contentLocation = $tab.attr("href") + 'Tab';
 
-    // Strip off the current url that IE adds
-    contentLocation = contentLocation.replace(/^.+#/, '#');
-
-    //Make Tab Active
-    $activeTab.removeClass('active');
-    $tab.addClass('active');
+	  //Make Tab Active
+	  $activeTab.removeClass('active');
+	  $tab.addClass('active');
 
     //Show Tab Content
-    $(contentLocation).closest('.tabs-content').children('li').removeClass('active').hide();
-    $(contentLocation).css('display', 'block').addClass('active');
+		$(contentLocation).closest('.tabs-content').find('li').hide();
+		$(contentLocation).show();
+	}
+
+	$('dl.tabs').each(function () {
+		//Get all tabs
+		var tabs = $(this).children('dd').children('a');
+		tabs.click(function (e) {
+		  activateTab($(this));
+		});
+	});
+
+	if (window.location.hash) {
+    activateTab($('a[href="' + window.location.hash + '"]'));
   }
 
-  $('dl.tabs dd a').on('click.fndtn', function (event) {
-    activateTab($(this).parent('dd'));
-  });
+	/* PLACEHOLDER FOR FORMS ------------- */
+	/* Remove this and jquery.placeholder.min.js if you don't need :) */
 
-  if (window.location.hash) {
-    activateTab($('a[href="' + window.location.hash + '"]').parent('dd'));
-    $.foundation.customForms.appendCustomMarkup();
-  }
+	$('input, textarea').placeholder();
 
-  /* ALERT BOXES ------------ */
-  $(".alert-box").delegate("a.close", "click", function(event) {
-    event.preventDefault();
-    $(this).closest(".alert-box").fadeOut(function(event){
-      $(this).remove();
-    });
-  });
+	/* DROPDOWN NAV ------------- */
+	/*
+	$('.nav-bar li a, .nav-bar li a:after').each(function() {
+		$(this).data('clicks', 0);
+	});
+	$('.nav-bar li a, .nav-bar li a:after').bind('touchend click', function(e){
+		e.stopPropagation();
+		e.preventDefault();
+		var f = $(this).siblings('.flyout');
+		$(this).data('clicks', ($(this).data('clicks') + 1));
+		if (!f.is(':visible') && f.length > 0) {
+			$('.nav-bar li .flyout').hide();
+			f.show();
+		}
+	});
+	$('.nav-bar li a, .nav-bar li a:after').bind(' touchend click', function(e) {
+		e.stopPropagation();
+		e.preventDefault();
+		if ($(this).data('clicks') > 1) {
+			window.location = $(this).attr('href');
+		}
+	});
+	$('.nav-bar').bind('touchend click', function(e) {
+		e.stopPropagation();
+		if (!$(e.target).parents('.nav-bar li .flyout') || $(e.target) != $('.nav-bar li .flyout')) {
+			e.preventDefault();
+		}
+	});
+	$('body').bind('touchend', function(e) {
+		if (!$(e.target).parents('.nav-bar li .flyout') || $(e.target) != $('.nav-bar li .flyout')) {
+			$('.nav-bar li .flyout').hide();
+		}
+	});
+	*/
 
-  /* PLACEHOLDER FOR FORMS ------------- */
-  /* Remove this and jquery.placeholder.min.js if you don't need :) */
-  $('input, textarea').placeholder();
+	/* DISABLED BUTTONS ------------- */
+	/* Gives elements with a class of 'disabled' a return: false; */
 
-  /* TOOLTIPS ------------ */
-  $(this).tooltips();
-
-  /* UNCOMMENT THE LINE YOU WANT BELOW IF YOU WANT IE6/7/8 SUPPORT AND ARE USING .block-grids */
-  //  $('.block-grid.two-up>li:nth-child(2n+1)').css({clear: 'left'});
-  //  $('.block-grid.three-up>li:nth-child(3n+1)').css({clear: 'left'});
-  //  $('.block-grid.four-up>li:nth-child(4n+1)').css({clear: 'left'});
-  //  $('.block-grid.five-up>li:nth-child(5n+1)').css({clear: 'left'});
-
-
-  /* DROPDOWN NAV ------------- */
-
-  var lockNavBar = false;
-  /* Windows Phone, sadly, does not register touch events :( */
-  if (Modernizr.touch || navigator.userAgent.match(/Windows Phone/i)) {
-    $('.nav-bar a.flyout-toggle').on('click.fndtn touchstart.fndtn', function(e) {
-      e.preventDefault();
-      var flyout = $(this).siblings('.flyout').first();
-      if (lockNavBar === false) {
-        $('.nav-bar .flyout').not(flyout).slideUp(500);
-        flyout.slideToggle(500, function(){
-          lockNavBar = false;
-        });
-      }
-      lockNavBar = true;
-    });
-    $('.nav-bar>li.has-flyout').addClass('is-touch');
-  } else {
-    $('.nav-bar>li.has-flyout').hover(function() {
-      $(this).children('.flyout').show();
-    }, function() {
-      $(this).children('.flyout').hide();
-    });
-  }
-
-  /* DISABLED BUTTONS ------------- */
-  /* Gives elements with a class of 'disabled' a return: false; */
-  $('.button.disabled').on('click.fndtn', function (event) {
-    event.preventDefault();
-  });
-  
-
-  /* SPLIT BUTTONS/DROPDOWNS */
-  $('.button.dropdown > ul').addClass('no-hover');
-
-  $('.button.dropdown').on('click.fndtn touchstart.fndtn', function (e) {
-    e.stopPropagation();
-  });
-  $('.button.dropdown.split span').on('click.fndtn touchstart.fndtn', function (e) {
-    e.preventDefault();
-    $('.button.dropdown').not($(this).parent()).children('ul').removeClass('show-dropdown');
-    $(this).siblings('ul').toggleClass('show-dropdown');
-  });
-  $('.button.dropdown').not('.split').on('click.fndtn touchstart.fndtn', function (e) {
-    $('.button.dropdown').not(this).children('ul').removeClass('show-dropdown');
-    $(this).children('ul').toggleClass('show-dropdown');
-  });
-  $('body, html').on('click.fndtn touchstart.fndtn', function () {
-    $('.button.dropdown ul').removeClass('show-dropdown');
-  });
-
-  // Positioning the Flyout List
-  var normalButtonHeight  = $('.button.dropdown:not(.large):not(.small):not(.tiny)').outerHeight() - 1,
-      largeButtonHeight   = $('.button.large.dropdown').outerHeight() - 1,
-      smallButtonHeight   = $('.button.small.dropdown').outerHeight() - 1,
-      tinyButtonHeight    = $('.button.tiny.dropdown').outerHeight() - 1;
-
-  $('.button.dropdown:not(.large):not(.small):not(.tiny) > ul').css('top', normalButtonHeight);
-  $('.button.dropdown.large > ul').css('top', largeButtonHeight);
-  $('.button.dropdown.small > ul').css('top', smallButtonHeight);
-  $('.button.dropdown.tiny > ul').css('top', tinyButtonHeight);
-  
-  $('.button.dropdown.up:not(.large):not(.small):not(.tiny) > ul').css('top', 'auto').css('bottom', normalButtonHeight - 2);
-  $('.button.dropdown.up.large > ul').css('top', 'auto').css('bottom', largeButtonHeight - 2);
-  $('.button.dropdown.up.small > ul').css('top', 'auto').css('bottom', smallButtonHeight - 2);
-  $('.button.dropdown.up.tiny > ul').css('top', 'auto').css('bottom', tinyButtonHeight - 2);
-
-  /* CUSTOM FORMS */
-  $.foundation.customForms.appendCustomMarkup();
 
 });

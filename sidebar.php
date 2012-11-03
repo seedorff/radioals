@@ -1,19 +1,12 @@
-				<div id="sidebar1" class="sidebar four columns" role="complementary">
+<!-- sidebar -->
+<aside class="four columns">
 
-					<div class="panel">
-				
-						<?php if ( is_active_sidebar( 'sidebar1' ) ) : ?>
+	<ul>
+		<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Right Sidebar')) : ?>
+		<li><h4>Hey! You!</h4></li>
+		<li>You should like, so test out this dynamic sidebar. Check it out in Appearance > Widgets!</li>
+		<?php endif; ?>
+	</ul>
 
-							<?php dynamic_sidebar( 'sidebar1' ); ?>
-
-						<?php else : ?>
-
-							<!-- This content shows up if there are no widgets defined in the backend. -->
-							
-							<div class="alert-box">Please activate some Widgets.</div>
-
-						<?php endif; ?>
-
-					</div>
-
-				</div>
+</aside>
+<!-- sidebar -->

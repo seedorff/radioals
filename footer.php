@@ -1,30 +1,32 @@
-			<footer role="contentinfo">
+	</div>
+	<!-- Main Row -->
+	
+	<!-- Footer -->
+	<footer class="row">
+	
+		<div class="twelve columns"><hr></div>
+	
+			<div class="row">
 			
-					<div class="twelve columns">
+					<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer Sidebar')) : ?>
+					<h4>Hey! You!</h4>
+					<p>You should like, so test out this dynamic footer sidebar. Check it out in Appearance > Widgets!</p>
+					<?php endif; ?>
+				
+			</div>
+	
+	</footer>
+	<!-- Footer -->
 
-						<div class="row">
+	</div>
+	<!-- container -->
 
-							<nav class="ten columns clearfix">
-								<?php bones_footer_links(); ?>
-							</nav>
+	<!-- Included JS Files -->	
+	<script src="<?php bloginfo('template_url'); ?>/javascripts/foundation.js"></script>
+	<script src="<?php bloginfo('template_url'); ?>/javascripts/orbit-1.3.0.js"></script>
+	<script src="<?php bloginfo('template_url'); ?>/javascripts/app.js"></script>
 
-							<p class="attribution two columns"><a href="http://320press.com" id="credit320" title="By the dudes of 320press">320press</a></p>
-
-						</div>
-
-					</div>
-					
-			</footer> <!-- end footer -->
-		
-		</div> <!-- end #container -->
-		
-		<!--[if lt IE 7 ]>
-  			<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
-  			<script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
-		<![endif]-->
-		
-		<?php wp_footer(); // js scripts are inserted using this function ?>
-
-	</body>
-
+	<?php wp_footer(); ?>
+	
+</body>
 </html>
