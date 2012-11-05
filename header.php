@@ -34,24 +34,30 @@
 		<div class="row">
 			
 				<!-- Header Column -->
-				<div class="twelve columns" id="access" role="navigation">
+				<div class="twelve columns">
 					
-					<span id="skipnav" class="show-on-phones"><a href="#content">Skip to Content?</a></span>
+					
 				
 					<!-- Site Description & Title -->
 					<hgroup id="header">
 						<h1><a href="<?php echo site_url(); ?>"><?php bloginfo('title'); ?></a></h1>
 						<h4 class="subheader"><?php bloginfo('description'); ?></h4>
 					</hgroup>
-
-					<!-- Navigation --> 					
- 				    <?php wp_nav_menu( array( 'theme_location' => 'header-menu','menu_class' => 'nav-bar', 'container' => 'nav') ); ?>
-				
+					
 				</div>
 				<!-- Header Column -->
 				
 		</div>
 		<!-- Header Row -->
+
+		<!-- Navigation --> 
+		<div class="nav-bar-bg">
+			<div class="row" id="access" role="navigation">					
+		    	<?php wp_nav_menu( array( 'theme_location' => 'header-menu','menu_class' => 'nav-bar', 'container' => 'nav') ); ?>
+		    </div>
+		</div>
+		<div class="nav-bar-shadow">
+		</div>
 		
 		<!-- Main Row -->
 		<div class="row">

@@ -71,7 +71,7 @@
 	
 	
 	
-	body { background: #fff; font-family: "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, "Lucida Grande", sans-serif; font-size: 13px; line-height: 18px; color: #555; position: relative; -webkit-font-smoothing: antialiased; }
+	body { background: #fff; font-family: "Myriad Pro", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, "Lucida Grande", sans-serif; font-size: 13px; line-height: 18px; color: #555; position: relative; -webkit-font-smoothing: antialiased; }
 	
 
 
@@ -195,9 +195,9 @@
 	
 	-------------------------------------------------- */
 
-	.container { padding: 0 20px; }
+	.container { padding: 0 0px; }
 	
-	.row { width: 100%; max-width: 980px; min-width: 727px; margin: 0 auto; }
+	.row { width: 100%; max-width: 800px; min-width: 800px; margin: 0 auto; }
 	/* To fix the grid into a certain size, set max-width to width */
 	.row .row { min-width: 0; }
 	
@@ -475,9 +475,11 @@
    	Nav Bar with Dropdowns
 	-------------------------------------------------- */
 	
-	.nav-bar { height: 45px; background: #fff; margin-top: 20px; border: 1px solid #ddd; }	
-	.nav-bar>li { float: left; display: block; position: relative; padding: 0; margin: 0; border-right: 1px solid #ddd; line-height: 45px; }
-	.nav-bar>li>a { position: relative; font-size: 14px; padding: 0 20px; display: block; text-decoration: none; font-size: 15px; font-size: 1.5rem; }
+	.nav-bar { height: 40px; margin-top: 0px; }
+	.nav-bar-bg { height: 40px; width: 100%; background: url('../images/nav.png');}
+	.nav-bar-shadow { height: 21px; width: 100%; background: url('../images/nav-bar-shadow.png') top center no-repeat; position: relative; margin-bottom: -21px; z-index: 9999999;}	
+	.nav-bar>li { float: left; display: block; position: relative; padding: 0; margin: 0; line-height: 40px; }
+	.nav-bar>li>a { position: relative; font-size: 14px; padding: 0 20px; display: block; text-decoration: none; font-size: 15px; font-size: 14px; color: #fff;}
 	.nav-bar>li>input { margin: 0 16px; }
 	.nav-bar>li ul { margin-bottom: 0; }
 	.nav-bar>li li { line-height: 1.3; }
