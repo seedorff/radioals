@@ -71,7 +71,7 @@
 	
 	
 	
-	body { background: #fff; font-family: "Myriad Pro", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, "Lucida Grande", sans-serif; font-size: 13px; line-height: 18px; color: #555; position: relative; -webkit-font-smoothing: antialiased; }
+	body { background: #fff url('../images/bg.jpg') repeat-x top center; font-family: "Myriad Pro", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, "Lucida Grande", sans-serif; font-size: 13px; line-height: 18px; color: #555; position: relative; -webkit-font-smoothing: antialiased; }
 	
 
 
@@ -200,6 +200,8 @@
 	.row { width: 100%; max-width: 800px; min-width: 800px; margin: 0 auto; }
 	/* To fix the grid into a certain size, set max-width to width */
 	.row .row { min-width: 0; }
+
+	.seperator {border-right: #b8b8b8 solid 1px;}
 	
 	.column, .columns { margin-left: 4.4%; float: left; min-height: 1px; position: relative; }
 	.column:first-child, .columns:first-child { margin-left: 0; }
@@ -216,6 +218,10 @@
 	.row .ten.columns 		{ width: 82.6%; }
 	.row .eleven.columns 	{ width: 91.3%; }
 	.row .twelve.columns 	{ width: 100%; }
+
+	.row .front-left.columns 	{ width: 490px; }
+	.row .front-right.columns 	{ width: 309px; margin-left: 0; }
+
 	
 	.row .offset-by-one 	{ margin-left: 13.1%;  }
 	.row .offset-by-two 	{ margin-left: 21.8%;  }
@@ -284,6 +290,8 @@
 /* --------------------------------------------------
    Table of Contents
 -----------------------------------------------------
+:: Header
+:: Content
 :: Buttons
 :: Alerts
 :: Notices/Alerts
@@ -295,7 +303,129 @@
 :: Microformats
 */
 
+/*	--------------------------------------------------
+	Header
+	-------------------------------------------------- */
 
+	#header h1 {
+		margin: 20px 0 0 0;
+	}
+
+	#listen {
+		background: url('../images/radio.png') no-repeat top right;
+		width: 400px;
+		height: 125px;
+		float: right;
+	}
+
+	#listen h2 {
+		text-transform: uppercase;
+		font-size: 30px;
+		color: #292929;
+		margin: 0;
+		padding: 45px 0 0 0;
+	}
+
+	#now_playing{
+		background: url('../images/play.png') no-repeat left 33px;
+		padding-top: 0px;
+		padding-left: 70px;
+		height: inherit;
+	}
+
+	#now_playing-shadow { 
+		background: url('../images/now_playing_shadow.png') no-repeat center bottom;
+		height: 33px;
+		width: 205px;
+	}
+	
+	#now_playing-text {
+		display: block;
+		width: inherit;
+		height: 20px;
+		line-height: 23px;
+		font-size: 11px;
+		padding-left: 5px;
+		color: #292929;
+		background: #fff;
+	}
+
+/*	--------------------------------------------------
+	Content
+	-------------------------------------------------- */
+
+	#content_wrapper {
+		background: #fff;
+		border-top-left-radius: 10px;
+		-webkit-border-top-left-radius: 10px;    
+		-moz-border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+		-webkit-border-top-right-radius: 10px;    
+		-moz-border-top-right-radius: 10px;
+	}
+
+	.content_heading {
+		background: url('../images/content_heading-bg.png') repeat-x;
+		color: #fff;
+		height: 32px;
+	}
+	.content_heading.h-left {
+		border-top-left-radius: 10px;
+		-webkit-border-top-left-radius: 10px;    
+		-moz-border-top-left-radius: 10px;
+	}
+	.content_heading.h-right {
+		border-top-right-radius: 10px;
+		-webkit-border-top-right-radius: 10px;    
+		-moz-border-top-right-radius: 10px;
+	}
+	.content_heading h1 {
+		font-size: 19px;
+		text-transform: uppercase;
+		color: inherit;
+		line-height: 35px;
+		padding-left: 15px;
+	}
+
+	/* Accordion ---------------------- */
+
+	.ui-helper-reset { outline: 0; }
+	.ui-accordion { width: 100%; }
+	.ui-accordion .ui-accordion-header { cursor: pointer; position: relative; zoom: 1; }
+	.ui-accordion .ui-accordion-li-fix { display: inline; }
+	.ui-accordion .ui-accordion-header-active { border-bottom: 0 !important; }
+	.ui-accordion .ui-accordion-header a { display: block; font-size: 14px; }
+	.ui-accordion-icons .ui-accordion-header a { padding-left: 10px; }
+	.ui-accordion .ui-accordion-header .ui-icon { position: absolute; left: .5em; top: 50%; margin-top: -8px; }
+	.ui-accordion .ui-accordion-content { padding: 5px 10px; border-top: 0; margin-top: -2px; position: relative; top: 0px; overflow: auto; display: none; zoom: 1; background: url('../images/news_content-bottom_bg.png') repeat-x bottom;}
+	.ui-accordion .ui-accordion-content-active { display: block; }
+
+	.news h2 {
+		background: url('../images/news_heading-bg.png') repeat-x;
+		line-height: 38px;
+		height: 38px;
+	}
+	.news h2 a {
+		color: #292929;
+		text-transform: uppercase;
+	}
+	.news p {
+		font-size: 12px;
+		color: #323232;
+	}
+	.post-thumb {
+		background: url('../images/img_thumb-shadow.png') no-repeat center bottom;
+		padding-bottom: 3px;
+		width: 95px;
+		float: left;
+		margin: 0 8px -5px 0;
+	}
+	.post-thumb img {
+		width: 100%;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+	}
 
 
 /*	--------------------------------------------------
@@ -646,6 +776,13 @@ div.orbit>img {
     position: absolute;
     top: 0;
     left: 0;
+    max-height: 275px;
+    border-bottom-right-radius: 50% 45px;
+	-webkit-border-bottom-right-radius: 50% 45px;    
+	-moz-border-bottom-right-radius: 50% 45px;
+    border-bottom-left-radius: 50% 45px;
+    -webkit-border-bottom-left-radius: 50% 45px;
+    -moz-border-bottom-left-radius: 50% 45px;
     /* display: none; */ }
 
 div.orbit>a {
@@ -662,6 +799,11 @@ div.orbit>a {
     left: 0;
     width: 100%;
     height: 100%; }
+
+#slidershadow {
+	background: url('../images/slidershadow.png') center -10px no-repeat;	
+}
+
 
 /* Note: If your slider only uses content or anchors, you're going to want to put the width and height declarations on the ".orbit>div" and "div.orbit>a" tags in addition to just the .orbit-wrapper */
 
@@ -681,13 +823,13 @@ div.timer {
     z-index: 1001; }
 
 span.rotator {
-    display: block;
+    display: none;
     width: 40px;
     height: 40px;
     position: absolute;
     top: 0;
     left: -20px;
-    background: url(../images/orbit/rotator-black.png) no-repeat;
+    background: url() no-repeat;
     z-index: 3; }
 
 span.mask {
@@ -706,7 +848,7 @@ span.rotator.move {
 span.mask.move {
     width: 40px;
     left: 0;
-    background: url(../images/orbit/timer-black.png) repeat 0 0; }
+    background: url() repeat 0 0; }
 
 span.pause {
     display: block;
@@ -715,12 +857,12 @@ span.pause {
     position: absolute;
     top: 0;
     left: 0;
-    background: url(../images/orbit/pause-black.png) no-repeat;
+    background: url() no-repeat;
     z-index: 4;
     opacity: 0; }
 
 span.pause.active {
-    background: url(../images/orbit/pause-black.png) no-repeat 0 -40px }
+    background: url() no-repeat 0 -40px }
 
 div.timer:hover span.pause,
 span.pause.active {
@@ -755,22 +897,22 @@ div.slider-nav {
     display: block }
 
 div.slider-nav span {
-    width: 78px;
-    height: 100px;
+    width: 29px;
+    height: 33px;
     text-indent: -9999px;
     position: absolute;
     z-index: 1000;
-    top: 50%;
+    top: 60%;
     margin-top: -50px;
     cursor: pointer; }
 
 div.slider-nav span.right {
-    background: url(../images/orbit/right-arrow.png);
-    right: 0; }
+    background: url(../images/orbit/right-arrow.png) no-repeat;
+    right: -15px; }
 
 div.slider-nav span.left {
-    background: url(../images/orbit/left-arrow.png);
-    left: 0; }
+    background: url(../images/orbit/left-arrow.png) no-repeat;
+    left: -15px; }
 
 /* BULLET NAV
    ================================================== */
@@ -779,9 +921,8 @@ div.slider-nav span.left {
     position: absolute;
     z-index: 1000;
     list-style: none;
-    bottom: -40px;
-    left: 50%;
-	margin-left: -50px;
+    top: 20px;
+    right: 0px;
     padding: 0; }
 
 .orbit-bullets li {
@@ -790,14 +931,14 @@ div.slider-nav span.left {
     cursor: pointer;
     color: #999;
     text-indent: -9999px;
-    background: url(../images/orbit/bullets.jpg) no-repeat 4px 0;
-    width: 13px;
-    height: 12px;
+    background: url(../images/orbit/bullets.png) no-repeat 0px 0;
+    width: 14px;
+    height: 14px;
     overflow: hidden; }
 
 .orbit-bullets li.active {
     color: #222;
-    background-position: -8px 0; }
+    background-position: -15px 0; }
     
 .orbit-bullets li.has-thumb {
     background: none;
@@ -823,9 +964,9 @@ div.slider-nav span.left {
     position: absolute;
     z-index: 1000;
     list-style: none;
-    bottom: -50px;
-    left: 50%;
-	margin-left: -50px;
+    top: 10px;
+    right: 15px;
+	margin-left: 0px;
     padding: 0; }
 
 .orbit-bullets li {
@@ -834,9 +975,9 @@ div.slider-nav span.left {
     cursor: pointer;
     color: #999;
     text-indent: -9999px;
-    background: url(../images/orbit/bullets.jpg) no-repeat 4px 0;
-    width: 13px;
-    height: 12px;
+    background: url(../images/orbit/bullets.png) no-repeat 0px 0;
+    width: 14px;
+    height: 14px;
     overflow: hidden; }
 
 .orbit-bullets li.has-thumb {
@@ -846,7 +987,7 @@ div.slider-nav span.left {
 
 .orbit-bullets li.active {
     color: #222;
-    background-position: -8px 0; }
+    background-position: -15px 0; }
 
 .orbit-bullets li.active.has-thumb {
     background-position: 0 0;
@@ -906,7 +1047,7 @@ div.slider-nav span.left {
 	}
 	
 	/* Mobile */
-		
+/*		
 		@media handheld, only screen and (device-width: 768px), (device-width: 800px) {
 			.reveal-modal-bg { position: absolute; }
 			
@@ -925,7 +1066,7 @@ div.slider-nav span.left {
 			.reveal-modal.medium,
 			.reveal-modal.large,
 			.reveal-modal.xlarge { width: 80%; top: 15%; left: 5%; margin-left: 0; padding: 5%; height: auto; }
-		}
+		}*/
 	
 	
 	/*
@@ -948,7 +1089,7 @@ div.slider-nav span.left {
 	:: Typography
 	-------------------------------------------------- */
 	
-	@media handheld, only screen and (max-width: 767px) {
+/*	@media handheld, only screen and (max-width: 767px) {
 		h1 { font-size: 32px; font-size: 3.2rem; line-height: 1.3; }
 		h2 { font-size: 28px; font-size: 2.8rem; line-height: 1.3; }
 		h3 { font-size: 21px; font-size: 2.1rem; line-height: 1.3; }
@@ -956,7 +1097,7 @@ div.slider-nav span.left {
 		h5 { font-size: 16px; font-size: 1.6rem; line-height: 1.2; }
 		h6 { font-size: 15px; font-size: 1.5rem; line-height: 1.2; }
 		body, p {  font-size: 15px; font-size: 1.5rem; line-height: 1.4; }
-	}
+	}*/
 
 
 /* --------------------------------------------------
@@ -964,12 +1105,11 @@ div.slider-nav span.left {
 	-------------------------------------------------- */
 	
 	/* Tablet screens */
-	@media only screen and (device-width: 768px), (device-width: 800px) {
-		/* Currently unused */
-	}
-	
+/*	@media only screen and (device-width: 768px), (device-width: 800px) {
+	}*/
 	
 	/* Mobile */
+	/*
 	@media only screen and (max-width: 767px) {		
 		body { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; width: 100%; min-width: 0; margin-left: 0; margin-right: 0; padding-left: 0; padding-right: 0; }
 		.container { min-width: 0; margin-left: 0; margin-right: 0; }
@@ -981,6 +1121,7 @@ div.slider-nav span.left {
 		
 		
 		/* Mobile 4-column Grid */
+		/*
 		.row .phone-one.column:first-child, .row .phone-two.column:first-child, .row .phone-three.column:first-child, .row .phone-four.column:first-child, .row .phone-one.columns:first-child, .row .phone-two.columns:first-child, .row .phone-three.columns:first-child, .row .phone-four.columns:first-child { margin-left: 0; }
 		
 		.row .phone-one.column, .row .phone-two.column, .row .phone-three.column, .row .phone-four.column,
@@ -993,17 +1134,17 @@ div.slider-nav span.left {
 		
 		
 	}
-	
+	*/
 	
 /* --------------------------------------------------
 	:: Block Grids
 	-------------------------------------------------- */	
 	
-	@media only screen and (max-width: 767px) {
+/*	@media only screen and (max-width: 767px) {
 		.block-grid.mobile { margin-left: 0; }
 		.block-grid.mobile li { float: none; width: 100%; margin-left: 0; }
 	}
-	
+	*/
 	
 
 /* -------------------------------------------------- 
@@ -1020,7 +1161,7 @@ div.slider-nav span.left {
 	.hide-on-desktops { display: none !important; }
 	
 	
-	@media only screen and (max-device-width: 800px), only screen and (device-width: 1024px) and (device-height: 600px), only screen and (width: 1280px) and (orientation: landscape), only screen and (device-width: 800px) {
+/*	@media only screen and (max-device-width: 800px), only screen and (device-width: 1024px) and (device-height: 600px), only screen and (width: 1280px) and (orientation: landscape), only screen and (device-width: 800px) {
 		.hide-on-phones { display: block !important; }
 		.hide-on-tablets { display: none !important; }
 		.hide-on-desktops { display: block !important; }
@@ -1028,10 +1169,10 @@ div.slider-nav span.left {
 		.show-on-phones { display: none !important; }
 		.show-on-tablets { display: block !important; }
 		.show-on-desktops { display: none !important; }
-	}
+	}*/
 	
 		
-	@media only screen and (max-width: 767px) {
+/*	@media only screen and (max-width: 767px) {
 		.hide-on-phones { display: none !important; }
 		.hide-on-tablets { display: block !important; }
 		.hide-on-desktops { display: block !important; }
@@ -1039,7 +1180,7 @@ div.slider-nav span.left {
 		.show-on-phones { display: block !important; }
 		.show-on-tablets { display: none !important; }
 		.show-on-desktops { display: none !important; }
-	}
+	}*/
 	
 	/* only screen and (device-width: 1280px), only screen and (max-device-width: 1280px),  /*
 	/* Keeping this in as a reminder to address support for other tablet devices like the Xoom in the future */
@@ -1049,7 +1190,7 @@ div.slider-nav span.left {
 	table.show-on-desktops { display: table !important; }
 	table.hide-on-phones { display: table !important; }	
 	table.hide-on-tablets { display: table !important; }
-	
+/*	
 	@media only screen and (max-device-width: 800px), only screen and (device-width: 1024px) and (device-height: 600px), only screen and (width: 1280px) and (orientation: landscape), only screen and (device-width: 800px) {
 		table.hide-on-phones { display: block !important; }
 		table.hide-on-desktops { display: block !important; }
@@ -1060,7 +1201,7 @@ div.slider-nav span.left {
 		table.hide-on-tablets { display: block !important; }
 		table.hide-on-desktops { display: block !important; }
 		table.show-on-phones { display: block !important; }
-	}
+	}*/
 	
 	
 /* -------------------------------------------------- 
@@ -1068,7 +1209,7 @@ div.slider-nav span.left {
 ---------------------------------------------------*/	
 
 
-	@media only screen and (max-width: 767px) {
+/*	@media only screen and (max-width: 767px) {
 		div.form-field input, div.form-field input.small, div.form-field input.medium, div.form-field input.large, div.form-field input.oversize, input.input-text, input.input-text.oversize, textarea,
 		form.nice div.form-field input, form.nice div.form-field input.oversize, form.nice input.input-text, form.nice input.input-text.oversize, form.nice textarea { display: block; width: 96%; padding: 6px 2% 4px; font-size: 18px; }
 		form.nice div.form-field input, form.nice div.form-field input.oversize, form.nice input.input-text, form.nice input.input-text.oversize, form.nice textarea { -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; }
@@ -1076,7 +1217,7 @@ div.slider-nav span.left {
 		form.nice div.form-field.error .small + small, form.nice .small + .error { width: auto; }
 		form.nice div.form-field.error .medium + small, form.nice .medium + .error { width: auto; }
 		form.nice div.form-field.error .large + small, form.nice .large + .error { width: auto; }
-	}
+	}*/
 	
 	
 /* -------------------------------------------------- 
@@ -1084,14 +1225,14 @@ div.slider-nav span.left {
 ---------------------------------------------------*/	
 	
 	/* Buttons */
-	@media only screen and (max-width: 767px) {
+/*	@media only screen and (max-width: 767px) {
 		.button { display: block; }
 		button.button { width: 100%; padding-left: 0; padding-right: 0; }
-	}
+	}*/
 	
 	/* Tabs */
 	
-	@media only screen and (max-width: 767px) {
+/*	@media only screen and (max-width: 767px) {
 		dl.tabs.mobile, dl.nice.tabs.mobile { width: auto; margin: 20px -20px 40px; height: auto; }
 		dl.tabs.mobile dt, dl.tabs.mobile dd, dl.nice.tabs.mobile dt, dl.nice.tabs.mobile dd { float: none; height: auto; }
 
@@ -1106,11 +1247,11 @@ div.slider-nav span.left {
 		dl.contained.mobile, dl.nice.contained.mobile { margin-bottom: 0; }
 		dl.contained.tabs.mobile dd a { padding: 18px 20px; }
 		dl.nice.contained.tabs.mobile dd a { padding: 18px 20px; }
-	}
+	}*/
 	
 	/* Nav Bar */
 
-	@media only screen and (max-width: 767px) {
+/*	@media only screen and (max-width: 767px) {
 		.nav-bar { height: auto; }
 		.nav-bar>li { float: none; display: block; border-right: none; }
 		.nav-bar>li>a { text-align: left; border-top: 1px solid #ddd; border-right: none; } 
@@ -1123,4 +1264,4 @@ div.slider-nav span.left {
 		.flyout.right { float: none; right: auto; left: -1px; }
 		.flyout.small, .flyout.large { width: auto; }
 		.flyout p:last-child { margin-bottom: 18px; }
-	}
+	}*/

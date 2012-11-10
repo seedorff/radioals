@@ -12,7 +12,7 @@
   var ORBIT = {
     
     defaults: {  
-      animation: 'horizontal-push', 		// fade, horizontal-slide, vertical-slide, horizontal-push, vertical-push
+      animation: 'fade', 		// fade, horizontal-slide, vertical-slide, horizontal-push, vertical-push
       animationSpeed: 600, 				// how fast animtions are
       timer: true, 						// true or false to have the timer
       advanceSpeed: 4000, 				// if timer is enabled, time between transitions 
@@ -23,7 +23,7 @@
       captions: true, 					// do you want captions?
       captionAnimation: 'fade', 			// fade, slideOpen, none
       captionAnimationSpeed: 600, 		// if so how quickly should they animate in
-      bullets: false,						// true or false to activate the bullet navigation
+      bullets: true,						// true or false to activate the bullet navigation
       bulletThumbs: false,				// thumbnails for the bullets
       bulletThumbLocation: '',			// location from this file where thumbs will be
       afterSlideChange: $.noop,		// empty function 

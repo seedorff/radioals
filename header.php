@@ -23,6 +23,14 @@
 	
 	<?php wp_head(); ?>
 
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+  
+	<script>
+	  $(document).ready(function() {
+	    $("#accordion").accordion();
+	  });
+	</script>
+
 </head>
 
 <body <?php body_class(); ?>>
@@ -40,10 +48,16 @@
 				
 					<!-- Site Description & Title -->
 					<hgroup id="header">
-						<h1><a href="<?php echo site_url(); ?>"><?php bloginfo('title'); ?></a></h1>
-						<h4 class="subheader"><?php bloginfo('description'); ?></h4>
-					</hgroup>
-					
+						<h1 id="logo" class="four columns"><a href="<?php echo site_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo_radioals.png" alt="<?php echo get_bloginfo('name'); ?>" title="<?php echo get_bloginfo('name'); ?>" /></a></h1>						
+						<div id="listen">							
+							<div id="now_playing">
+								<h2>Hør Netradio</h2>
+								<div id="now_playing-shadow">
+									<span id="now_playing-text">→ Now Playing</span>
+								</div>	
+							</div>
+						</div>
+					</hgroup>	
 				</div>
 				<!-- Header Column -->
 				
