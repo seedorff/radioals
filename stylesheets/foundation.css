@@ -397,7 +397,7 @@
 	.ui-accordion .ui-accordion-header a { display: block; font-size: 14px; }
 	.ui-accordion-icons .ui-accordion-header a { padding-left: 10px; }
 	.ui-accordion .ui-accordion-header .ui-icon { position: absolute; left: .5em; top: 50%; margin-top: -8px; }
-	.ui-accordion .ui-accordion-content { padding: 5px 10px; border-top: 0; margin-top: -2px; position: relative; top: 0px; overflow: auto; display: none; zoom: 1; background: url('../images/news_content-bottom_bg.png') repeat-x bottom;}
+	.ui-accordion .ui-accordion-content { padding: 5px 10px; border-top: 0; margin-top: -2px; position: relative; top: 0px; overflow: hidden; display: none; zoom: 1; background: url('../images/news_content-bottom_bg.png') repeat-x bottom;}
 	.ui-accordion .ui-accordion-content-active { display: block; }
 
 	.news h2 {
@@ -801,7 +801,7 @@ div.orbit>a {
     height: 100%; }
 
 #slidershadow {
-	background: url('../images/slidershadow.png') center -10px no-repeat;	
+	background: url('../images/slidershadow.png') center bottom no-repeat;	
 }
 
 

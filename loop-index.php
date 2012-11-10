@@ -17,7 +17,7 @@
 						<?php echo get_the_post_thumbnail( $post_id, $size, $attr ); ?>
 					</div>
 					<div class="entry">
-						<?php the_content(); ?>
+						<?php the_excerpt(); ?>
 					</div>
 		</div>
 		
