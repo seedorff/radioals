@@ -51,12 +51,56 @@ if (function_exists('register_sidebar')) {
 		'after_title' => '</h4>',
 	));
 	
-	// Footer Sidebar
+	// Spotbox Sidebar
+
+	register_sidebar(array(
+		'name'=> 'Spotbox Widget Area',
+		'id' => 'spotbox_sidebar',
+		'before_widget' => '<div id="%1$s" class="spotbox_img columns spotbox_img %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '',
+		'after_title' => '',
+	));
 	
+	// Banner spot 1
+
+	register_sidebar(array(
+		'name'=> 'Banner spot1: 300x100',
+		'id' => 'bannerspot1_sidebar',
+		'before_widget' => '<div id="%1$s" class=" %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '',
+		'after_title' => '',
+	));
+
+	// Banner spot 2
+
+	register_sidebar(array(
+		'name'=> 'Banner spot2: 300x100',
+		'id' => 'bannerspot2_sidebar',
+		'before_widget' => '<div id="%1$s" class=" %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '',
+		'after_title' => '',
+	));
+
+	// Banner spot 3
+
+	register_sidebar(array(
+		'name'=> 'Banner spot3: 180x100',
+		'id' => 'bannerspot3_sidebar',
+		'before_widget' => '<div id="%1$s" class=" %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '',
+		'after_title' => '',
+	));
+
+	// Footer Sidebar
+
 	register_sidebar(array(
 		'name'=> 'Footer Sidebar',
 		'id' => 'footer_sidebar',
-		'before_widget' => '<div id="%1$s" class="four columns %2$s">',
+		'before_widget' => '<div id="%1$s" class="twelve columns %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4>',
 		'after_title' => '</h4>',

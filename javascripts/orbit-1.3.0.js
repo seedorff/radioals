@@ -27,8 +27,8 @@
       bulletThumbs: false,				// thumbnails for the bullets
       bulletThumbLocation: '',			// location from this file where thumbs will be
       afterSlideChange: $.noop,		// empty function 
-      fluid: true,
-      centerBullets: true    // center bullet nav with js, turn this off if you want to position the bullet nav manually
+      fluid: false,
+      centerBullets: false    // center bullet nav with js, turn this off if you want to position the bullet nav manually
  	  },
  	  
  	  activeSlide: 0,

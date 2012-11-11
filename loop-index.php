@@ -7,7 +7,12 @@
 		<!-- Start the Loop -->	
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-		<h2><a href="#" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+		<h2>
+			<a href="#" title="<?php the_title_attribute(); ?>">
+				<?php the_title(); ?>
+				<img scr="<?php echo get_template_directory_uri(); ?>/images/button-read_more.png" />
+			</a>
+		</h2>
 		<div>
 			<!-- Display the date (November 16th, 2009 format) and a link to other posts by this posts author. -->
 					<?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?>

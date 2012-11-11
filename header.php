@@ -30,6 +30,15 @@
 	    $("#accordion").accordion();
 	  });
 	</script>
+	<script language="javascript">
+		<!-- Begin
+		function popUp(URL) {
+		day = new Date();
+		id = day.getTime();
+		eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=350,height=400,left = 665,top = 225');");
+		}
+		// End -->
+	</script>
 
 </head>
 
@@ -51,7 +60,7 @@
 						<h1 id="logo" class="four columns"><a href="<?php echo site_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo_radioals.png" alt="<?php echo get_bloginfo('name'); ?>" title="<?php echo get_bloginfo('name'); ?>" /></a></h1>						
 						<div id="listen">							
 							<div id="now_playing">
-								<h2>Hør Netradio</h2>
+								<h2><a target="_self" href="javascript:popUp('http://radioals.dk/stream/RadioAls.html')">Hør Netradio</a></h2>
 								<div id="now_playing-shadow">
 									<span id="now_playing-text">→ Now Playing</span>
 								</div>	
