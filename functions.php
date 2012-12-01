@@ -50,6 +50,39 @@ if (function_exists('register_sidebar')) {
 		'before_title' => '<h4>',
 		'after_title' => '</h4>',
 	));
+
+	// Facebook widget area
+
+	register_sidebar(array(
+		'name'=> 'Facebook Widget',
+		'id' => 'facebook_widget',
+		'before_widget' => '<div id="%1$s" class=" %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4>',
+		'after_title' => '</h4>',
+	));
+
+	// Kalender widget area
+
+	register_sidebar(array(
+		'name'=> 'Kalender Widget',
+		'id' => 'calendar_widget',
+		'before_widget' => '<div id="%1$s" class=" %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4>',
+		'after_title' => '</h4>',
+	));
+
+	// Weather widget area
+
+	register_sidebar(array(
+		'name'=> 'Weather Widget',
+		'id' => 'weather_widget',
+		'before_widget' => '<div id="%1$s" class=" %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4>',
+		'after_title' => '</h4>',
+	));
 	
 	// Spotbox Sidebar
 
@@ -93,6 +126,17 @@ if (function_exists('register_sidebar')) {
 		'after_widget' => '</div>',
 		'before_title' => '',
 		'after_title' => '',
+	));
+
+	// banner right
+
+	register_sidebar(array(
+		'name'=> 'Banner spot right',
+		'id' => 'banner_right',
+		'before_widget' => '<div id="%1$s" class=" %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4>',
+		'after_title' => '</h4>',
 	));
 
 	// Footer Sidebar

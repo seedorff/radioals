@@ -1,4 +1,4 @@
-<div class="eight columns">
+
 
 <!-- Skip Nav -->
 <a id="content"></a>
@@ -9,9 +9,6 @@
 		<!-- Begin the first div -->
 		<div>
 				
-			<h2>
-				<?php the_title(); ?>
-			</h2>
 			
 			<!-- Display the Page's Content in a div box. -->
 			<div class="entry">
@@ -31,4 +28,3 @@
 	<!--End the loop -->
 	<?php endif; ?>
 	
-</div>

@@ -14,37 +14,75 @@
 				<h1>Nyheder</h1>
 			</div>
 			<?php get_template_part( 'loop', 'index' ); ?>
+
+			<div class="weather content_heading h-left">
+				<h1>Vejret</h1>
+			</div>
+
+			<!-- sidebar -->
+			<aside>
+
+				<ul>
+					<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Weather Widget')) : ?>
+					
+					<?php endif; ?>
+				</ul>
+
+			</aside>
+			<!-- sidebar -->
 			
 		</div>
 		<div class="front-right columns right_seperator">
-			<div class="content_heading h-right">
+			<div class="poll content_heading h-right">
 				<h1>Poll</h1>
 			</div>
-				<div id="sidebar">
-					<?php get_sidebar(); ?>
-				</div>
+			<div id="sidebar">
+				<?php get_sidebar(); ?>
+				<div style="clear:both"></div>
+			</div>
+			
+			<div class="facebook content_heading h-right">
+				<h1>Facebook</h1>
+			</div>
+			<!-- facebook area -->
+			<aside>
+
+				<ul>
+					<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Facebook widget')) : ?>
+			
+					<?php endif; ?>
+				</ul>
+
+			</aside>
+			<div style="clear:both"></div>
+
+			<!-- facebook area -->
+
+			<div class="kalender content_heading h-right">
+				<h1>Kalender</h1>
+			</div>
+			<!-- kalender area -->
+			<aside>
+
+				<ul>
+					<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Kalender Widget')) : ?>
+			
+					<?php endif; ?>
+				</ul>
+
+			</aside>
+			<div style="clear:both"></div>
+
+			<!-- kalender area -->
+
+
+
+
 		</div>
 
 		<div style="clear:both"></div>
 	</div>
+	<?php get_template_part( 'banner_right'); ?>
 </div>
-<div class="shadow_wrap_800px">
-	<div class="content_wrapper spotbox">
 		
-		<!-- spotbox widgets -->
-		<aside>
-
-			<ul>
-				<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Spotbox Widget Area')) : ?>
-				<li><h4>Spotbox widget area</h4></li>
-				<li>Add widgets in Appearance > Widgets!</li>
-				<?php endif; ?>
-			</ul>
-
-		</aside>
-		<!-- spotbox widgets -->
-
-		<div style="clear:both"></div>
-	</div>
-</div>		
 <?php get_footer(); ?>

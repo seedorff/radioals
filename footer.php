@@ -1,3 +1,23 @@
+		<div class="shadow_wrap_800px">
+			<div class="content_wrapper spotbox">
+				
+				<!-- spotbox widgets -->
+				<aside>
+
+					<ul>
+						<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Spotbox Widget Area')) : ?>
+						<li><h4>Spotbox widget area</h4></li>
+						<li>Add widgets in Appearance > Widgets!</li>
+						<?php endif; ?>
+					</ul>
+
+				</aside>
+				<!-- spotbox widgets -->
+
+				<div style="clear:both"></div>
+			</div>
+		</div>
+
 	</div>
 	<!-- Main Row -->
 
@@ -10,8 +30,6 @@
 
 				<ul>
 					<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Banner spot1: 300x100')) : ?>
-					<li style="margin: -18px 0 0">Go to Appearance > Widgets to insert banners</li>
-					<li><img src="<?php echo get_template_directory_uri(); ?>/images/banner_placeholder_300x100.png" /></li>
 					
 					<?php endif; ?>
 				</ul>
@@ -24,9 +42,7 @@
 
 				<ul>
 					<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Banner spot2: 300x100')) : ?>
-					
-					<li><img src="<?php echo get_template_directory_uri(); ?>/images/banner_placeholder_300x100.png" /></li>
-					
+										
 					<?php endif; ?>
 				</ul>
 
@@ -38,9 +54,7 @@
 
 				<ul>
 					<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Banner spot3: 180x100')) : ?>
-					
-					<li><img src="<?php echo get_template_directory_uri(); ?>/images/banner_placeholder_180x100.png" /></li>
-					
+										
 					<?php endif; ?>
 				</ul>
 
